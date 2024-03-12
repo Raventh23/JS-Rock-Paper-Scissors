@@ -1,4 +1,4 @@
-function getComputerChoice() {
+function getComputerChoice() { //gets the computers selection for the game
     let randomChoice = Math.floor(Math.random() * 3);
     if (randomChoice == 0) {
         return "rock";
@@ -9,9 +9,9 @@ function getComputerChoice() {
     }
     return getComputerChoice;
 }
-function playerSelection(userInput) {
+function playerSelection(userInput) { // takes the user input and makes it lowercase so it can be used for the game
     let playerSelection = userInput.toLowerCase();
-    return playerSelection
+    return playerSelection;
 }
 
 let userInput = prompt("enter your choice: ");
