@@ -13,21 +13,28 @@ function playerSelection(userInput) { // takes the user input and makes it lower
     let playerSelection = userInput.toLowerCase();
     return playerSelection;
 }
-function playRound(playerSelection, computerChoice){
+function playRound(playerSelection, computerChoice){ //checks who wins and outputs the result
     if (playerSelection == computerChoice){
-        return "It's a tie!"
+        return "It's a tie!";
     } else if ((playerSelection == "rock") && (computerChoice == "paper")){
-        return "You Win!"
+        return "You Win!";
     }else if ((playerSelection == "scissors") && (computerChoice == "paper")){
-        return "You Lose!"
+        return "You Lose!";
     }else if ((playerSelection == "paper") && (computerChoice == "rock")){
-        return "you Win"
+        return "you Win";
     } else if ((playerSelection == "scissors") && (computerChoice == "rock")){
-        return "you Lose"
+        return "you Lose";
     } else if ((playerSelection == "rock") && (computerChoice == "scissors")){
-        return "you win"
+        return "you win";
     } else if ((playerSelection == "paper") && (computerChoice == "scissors")){
-        return "you lose"
+        return "you lose";
     }
 }
-let userInput = prompt("enter your choice: ");
+function playGame(){
+    for(let step = 0; step < 5; step++){
+        let userInput = prompt("enter your choice: ");
+        
+    }
+}
+let userScore = 0, 
+    computerScore = 0;
