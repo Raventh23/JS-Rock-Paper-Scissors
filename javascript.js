@@ -13,5 +13,21 @@ function playerSelection(userInput) { // takes the user input and makes it lower
     let playerSelection = userInput.toLowerCase();
     return playerSelection;
 }
-
+function playRound(playerSelection, computerChoice){
+    if (playerSelection == computerChoice){
+        return "It's a tie!"
+    } else if ((playerSelection == "rock") && (computerChoice == "paper")){
+        return "You Win!"
+    }else if ((playerSelection == "scissors") && (computerChoice == "paper")){
+        return "You Lose!"
+    }else if ((playerSelection == "paper") && (computerChoice == "rock")){
+        return "you Win"
+    } else if ((playerSelection == "scissors") && (computerChoice == "rock")){
+        return "you Lose"
+    } else if ((playerSelection == "rock") && (computerChoice == "scissors")){
+        return "you win"
+    } else if ((playerSelection == "paper") && (computerChoice == "scissors")){
+        return "you lose"
+    }
+}
 let userInput = prompt("enter your choice: ");
