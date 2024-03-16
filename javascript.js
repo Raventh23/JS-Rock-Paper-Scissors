@@ -17,16 +17,22 @@ function playRound(playerSelection, computerChoice){ //checks who wins and outpu
     if (playerSelection == computerChoice){
         return "It's a tie!";
     } else if ((playerSelection == "rock") && (computerChoice == "paper")){
+        userScore++;
         return "You Win!";
     }else if ((playerSelection == "scissors") && (computerChoice == "paper")){
+        computerScore++;
         return "You Lose!";
     }else if ((playerSelection == "paper") && (computerChoice == "rock")){
+        userScore++;
         return "you Win";
     } else if ((playerSelection == "scissors") && (computerChoice == "rock")){
+        computerScore++;
         return "you Lose";
     } else if ((playerSelection == "rock") && (computerChoice == "scissors")){
+        userScore++;
         return "you win";
     } else if ((playerSelection == "paper") && (computerChoice == "scissors")){
+        computerScore++;
         return "you lose";
     }
 }
