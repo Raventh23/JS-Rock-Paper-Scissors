@@ -24,22 +24,37 @@ function playRound(playerSelection, computerChoice){ //checks who wins and outpu
         return "You Lose!";
     }else if ((playerSelection == "paper") && (computerChoice == "rock")){
         userScore++;
-        return "you Win";
+        return "You Win!";
     } else if ((playerSelection == "scissors") && (computerChoice == "rock")){
         computerScore++;
-        return "you Lose";
+        return "You Lose!";
     } else if ((playerSelection == "rock") && (computerChoice == "scissors")){
         userScore++;
-        return "you win";
+        return "You Win!";
     } else if ((playerSelection == "paper") && (computerChoice == "scissors")){
         computerScore++;
-        return "you lose";
+        return "You Lose!";
     }
 }
 function playGame(){
     for(let step = 0; step < 5; step++){
         let userInput = prompt("enter your choice: ");
-        
+        let computerplay = getComputerChoice();
+        userInput = playerSelection(userInput);
+        let roundResult = playRound(userInput, computerplay);
+        console.log(roundResult);
+        if (roundResult == "You Lose!"){
+            computerScore ++
+        } else if(roundResult == "You Win"){
+            userScore ++
+        }
+    }
+    if (userScore > computerScore){
+        console.log("congratulations! you won with", userScore, "the computer got", computerScore, "points")
+    } else if(computerScore > userScore){
+        console.log("you Lost! the computer won with", computerScore, "while you have", userScore)
+    } else{
+        console.log("you tied with the computer refresh if you want to play again")
     }
 }
 let userScore = 0, 
