@@ -37,6 +37,8 @@ function playRound(playerSelection, computerChoice){ //checks who wins and outpu
     }
 }
 function playGame(){
+    let userScore = 0, 
+    computerScore = 0;
     for(let step = 0; step < 5; step++){
         let userInput = prompt("enter your choice: ");
         let computerplay = getComputerChoice();
@@ -54,8 +56,8 @@ function playGame(){
     } else if(computerScore > userScore){
         console.log("you Lost! the computer won with", computerScore, "while you have", userScore)
     } else{
-        console.log("you tied with the computer refresh if you want to play again")
+        console.log("you tied with the computer")
     }
 }
-let userScore = 0, 
-    computerScore = 0;
+playGame()
+console.log("refresh if you want to play again")
